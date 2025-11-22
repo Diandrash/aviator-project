@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  nextjs-app:
+    image: nextjs-app:latest
+    ports:
+      - "${PORT}:3000"
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - NEXT_PUBLIC_CREDENTIAL_VALUE=${NEXT_PUBLIC_CREDENTIAL_VALUE}
+    restart: unless-stopped
+    labels:
+      - "app=nextjs"
+      - "environment=production"

@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  nextjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_CREDENTIAL_VALUE=${NEXT_PUBLIC_CREDENTIAL_VALUE}
+    ports:
+      - "3050:3000"
+    environment:
+      - NEXT_PUBLIC_CREDENTIAL_VALUE=${NEXT_PUBLIC_CREDENTIAL_VALUE}
