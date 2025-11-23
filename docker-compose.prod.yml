@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   nextjs-app:
-    image: nextjs-app:latest
+    image: aviator-project-nextjs-app:latest
     ports:
       - "${PORT}:3000"
     environment:
